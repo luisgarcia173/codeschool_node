@@ -51,6 +51,8 @@
   
 > If Linux/Mac use Curl to check application 
  - curl http://localhost:8080
+> If Windows (see on browser the result)
+ - node <js_file>
 
 # EVENTS
 
@@ -81,12 +83,12 @@
 > find modules
  $ npm search <module_name>
  
-> define package.json
+> define package.json **
  - should be in <app_root>/package.json
  - example:
  {
-	"name": "My App",
-	"version": "1",
+	"name": "<root_folder_name>",
+	"version": "1.0.0",
 	"dependencies": {
 		"connect": "1.8.7",
 		"underscore": "~1.3.3" (~ allow you to use all versions between 1.3.3 and 1.4.0, bad practice)
@@ -101,3 +103,19 @@
 	- Patch: Doesn't change the API (bug fixes)
 	
 # EXPRESS
+
+> "Sinatra inspired web development framework for Node.js -- insanely fast, flexible, and simple"
+ - Easy route URLs to callbacks
+ - Middleware (from Connect)
+ - Environment based configuration
+ - Redirection helpers
+ - File Uploads
+
+> install Express.js
+ $ npm install --save express
+
+> PrettyJson
+ $ npm install prettyjson -g
+
+> install ejs
+ $ npm install --save ejs
