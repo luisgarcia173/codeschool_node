@@ -1,0 +1,7 @@
+{
+  "name": "persisting",
+  "version": "1.0.0",
+  "dependencies": {
+    "redis": "^2.6.2"
+  }
+}

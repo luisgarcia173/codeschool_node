@@ -102,7 +102,7 @@
 	- Minor: Probably not change the API (new features)
 	- Patch: Doesn't change the API (bug fixes)
 	
-# EXPRESS
+# EXPRESS.JS
 
 > "Sinatra inspired web development framework for Node.js -- insanely fast, flexible, and simple"
  - Easy route URLs to callbacks
@@ -119,3 +119,44 @@
 
 > install ejs
  $ npm install --save ejs
+
+# SOCKET.IO
+
+> Web Sockets: allow us to connect to each of our clients to the server
+  - Using duplexed websocket connection
+
+> Create package.json file
+{
+  "name": "<root_folder_name>",
+  "version": "1.0.0",
+  "dependencies": {}
+}
+
+> Install Socket.io Module
+$ npm install --save socket.io
+
+> Broadcast: 
+ - [client] -> send message 
+ - [server] <- receive the message
+ - [broadcast] -> send to other connected clients
+app.js : socket.broadcast.emit("message", 'Hello');
+
+# PERSISTING DATA
+
+> Persisting Stores
+ - MongoDB
+ - CouchDB
+ - PostgreSQL
+ - Memcached
+ - Riak
+ - Redis (key-value store)
+
+> REDIS Commands:
+ - Strings: SET, GET, APPEND, DECR, INCR...
+ - Hashes: HSET, HGET, HDEL, HGETALL...
+ - Lists: LPUSH, LREM, LTRIM, RPOP, LINSERT...
+ - Sets: SADD, SREM, SMOVE, SMEMBERS...
+ - Stored Sets: ZADD, ZREM, ZSCORE, ZRANK...
+
+ > Install Redis Module
+$ npm install redis --save

@@ -1,0 +1,26 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+	
+	// Chat APP
+	var socket = io.connect('http://localhost:8080');
+	
+  socket.on('messages', function(data){
+		$('#status').html('Connected to chattr');
+		nickname = prompt("What is your nickname?");
+		socket.emit('join', nickname);
+		insertMessage(data);
+	});
+
+  socket.on('add chatter', function(name){
+    var chatter = $('<li>'+name+'</li>').data('name',name);
+    $('#chatters').append(chatter);
+  });
+
+  socket.on('remove chatter', function(name){
+    $('#chatters li[data-name='+name+']').remove();
+  });
+
+</script>
+
+<!-- Missing HTML 
+<html><h1>Test</h1></html>-->
