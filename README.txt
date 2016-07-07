@@ -158,5 +158,5 @@ app.js : socket.broadcast.emit("message", 'Hello');
  - Sets: SADD, SREM, SMOVE, SMEMBERS...
  - Stored Sets: ZADD, ZREM, ZSCORE, ZRANK...
 
- > Install Redis Module
-$ npm install redis --save
+> Install Redis Module
+ $ npm install redis --save
